@@ -6,3 +6,4 @@ These programs are `std` programs on the ESP32 using Embedded Rust
 ## Programs 
 
 1. [LED Blink](./led_blink/README.md)
+2. [Sensors](./sensors/sensors.md)
