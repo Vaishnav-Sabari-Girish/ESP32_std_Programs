@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-for dir in $(find . -type f -name Cargo.toml -exec dirname {} \;); do
-  (cd "$dir" && cargo clean)
-done
+# -exec runs from the current folder, so it's safe.
+# We pass the found path ({}) directly to cargo.
+find . -type f -name Cargo.toml -exec cargo +stable clean --manifest-path {} \;
